@@ -1,0 +1,10 @@
+<mvc:View controllerName="sds.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="{i18n>title}">
+   <content>
+    <Button id="btn1" type="Back" press=".onPress" text="View 1" />
+   </content>
+    
+    </Page>
+</mvc:View>
