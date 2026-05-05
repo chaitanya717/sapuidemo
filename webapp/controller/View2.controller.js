@@ -6,6 +6,10 @@ sap.ui.define([
     return Controller.extend("sds.controller.View2", {
         onInit() {
             console.log("init")
+        },
+        onBackPress(){
+            history.go(-1)
         }
+
     });
 });

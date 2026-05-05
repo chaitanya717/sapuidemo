@@ -1,10 +1,22 @@
 <mvc:View controllerName="sds.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page1" title="{i18n>title}">
+    <Page id="page1" titleAlignment="Center" title="Sales App SAPUI">
    <content>
-    <Button id="btn1" type="Back" press=".onPress" text="View 1" />
+ 
+    <Text id="txt1" text="Sales Order Display"  textAlign="Center" class="sapMH2FontSize sapUiTinyMarginTop"  width="100%" ></Text>
+<Label id="lb1" text="Enter You Order NO." class="sapUiTinyMarginBegin sapUiTinyMarginEnd sapUiTinyMarginTop " required="true" ></Label>
+<Input id="ip1" type="Number" required="true" width="30%" class="sapUiTinyMarginEnd"></Input>
+<Button id="btn1" icon="sap-icon://search" type="Emphasized" text="Search" class="sapUiTinyMarginBegin" ></Button>
    </content>
-    
+    <footer>
+    <Bar id="_IDGenBar" >
+    <contentRight>
+    <Button  id="save1" type="Emphasized"  text="Save"></Button>
+    <Button id="save2" type="Reject" text="Cancel"></Button>
+    </contentRight>
+    </Bar>
+    </footer>
+
     </Page>
 </mvc:View>

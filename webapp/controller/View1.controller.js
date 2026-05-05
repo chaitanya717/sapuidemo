@@ -6,6 +6,10 @@ sap.ui.define([
     return Controller.extend("sds.controller.View1", {
         onInit() {
             console.log("init")
+        },
+        onPress() {
+            alert("test")
+           this.getOwnerComponent().getRouter().navTo("RouteView2") 
         }
     });
 });
