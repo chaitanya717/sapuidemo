@@ -1,0 +1,49 @@
+<mvc:View controllerName="sds.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page id="page3" title="{i18n>title}" showNavButton="true" navButtonPress="onBackPress" >
+   <content>
+<ObjectHeader id="obh1" title="Sales Order" number="100" numberUnit="INR"   backgroundDesign="Solid"  >
+
+<attributes>
+<ObjectAttribute id="objh1" title="Sales Order Owner" text="MArcen"></ObjectAttribute>
+<ObjectAttribute id="objh2" title="Sales Order ID" text="234567"></ObjectAttribute>
+</attributes>
+
+<statuses>
+<ObjectStatus id="234" text="Success" icon="sap-icon://information" state="Success"></ObjectStatus>
+</statuses>
+
+</ObjectHeader>
+
+<IconTabBar id="icn1">
+<items>
+<IconTabFilter  id="ic1" icon="sap-icon://information">
+<Text id="txt2" text="Information Tab"></Text>
+</IconTabFilter>
+<IconTabFilter id="ic2" icon="sap-icon://notes">
+<Text id="txt3" text="Notes Tab"></Text>
+</IconTabFilter>
+</items>
+</IconTabBar>
+
+   </content>
+     <footer>
+            <Bar id="_IDGenBar3">
+                <contentRight>
+                    <Button
+                        id="save31"
+                        type="Emphasized"
+                        text="Save"
+                    />
+                    <Button
+                        id="save23"
+                        type="Reject"
+                        text="Cancel"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
+

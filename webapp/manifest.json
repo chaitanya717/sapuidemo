@@ -14,6 +14,26 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.23.0",
       "toolsId": "1f2ba4a6-2c29-47fe-bcf2-9109a3556ecf"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/Z_CURD_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "ZFIRST_ODATA_SRV": {
+        "uri": "/sap/opu/odata/sap/ZFIRST_ODATA_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/ZFIRST_ODATA_SRV/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -51,6 +71,20 @@
         "settings": {
           "bundleName": "sds.i18n.i18n"
         }
+      },
+      "BankModel": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "JsonPo": {
+        "type": "sap.ui.model.json.JSONModel"
+      },
+      "ZFIRST_ODATA_SRV": {
+        "dataSource": "ZFIRST_ODATA_SRV",
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "preload": true,
+        "settings": {}
       }
     },
     "resources": {
@@ -80,11 +114,18 @@
             "TargetView1"
           ]
         },
-         {
+        {
           "name": "RouteView2",
           "pattern": "secondview",
           "target": [
             "TargetView2"
+          ]
+        },
+        {
+          "name": "RouteView3",
+          "pattern": "thirdview",
+          "target": [
+            "TargetView3"
           ]
         }
       ],
@@ -93,14 +134,21 @@
           "viewType": "XML",
           "viewId": "View1",
           "viewName": "View1",
-          "transition" : "slide",
+          "transition": "slide",
           "clearControlAggregation": false
         },
         "TargetView2": {
           "viewType": "XML",
           "viewId": "View2",
           "viewName": "View2",
-          "transition" : "slide",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetView3": {
+          "viewType": "XML",
+          "viewId": "View3",
+          "viewName": "View3",
+          "transition": "slide",
           "clearControlAggregation": false
         }
       }

@@ -28,4 +28,31 @@ server:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
-        ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ignoreCertErrors: false
+        backend:
+          - path: /sap/opu/odata/sap/Z_CURD_SRV
+            url: http://163.223.244.16:8001
+            client: '100'
+            destination: SA4HANA
+          - path: /sap/opu/odata/sap/ZSA_FLIGHT_LISTE_SRV
+            url: http://163.223.244.16:8001
+            client: '100'
+            destination: SA4HANA
+          - path: /sap/opu/odata/sap/ZFIRST_ODATA_SRV
+            url: http://163.223.244.16:8001
+            client: '100'
+            destination: SA4HANA
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata/sap/Z_CURD_SRV
+            metadataPath: ./webapp/localService/mainService/metadata.xml
+            mockdataPath: ./webapp/localService/mainService/data
+            generateMockData: true
+          - urlPath: /sap/opu/odata/sap/ZFIRST_ODATA_SRV
+            metadataPath: ./webapp/localService/ZFIRST_ODATA_SRV/metadata.xml
+            mockdataPath: ./webapp/localService/ZFIRST_ODATA_SRV/data
+            generateMockData: true
+        annotations: []

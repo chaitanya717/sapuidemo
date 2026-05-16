@@ -3,161 +3,188 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
+    displayBlock="true"
 >
     <Page
         id="page1"
         titleAlignment="Center"
-        title="Sales App SAPUI"
+        title="Sales Customer App"
     >
-    <Panel id="pnl1" headerText="Employee Details" expandable="false" >
-        <content>
-           <l:Grid id="grd1" defaultSpan="L3 M3" vSpacing="0">
-           <l:content>
-           <Label class="sapUiTinyMarginTop" id="empname" text="Employee Name" required="true" ></Label>
-           <Input id="inp1" required="true" ></Input>
-
-           <Label class="sapUiTinyMarginTop" id="empid" text="Employee ID" required="true" ></Label>
-           <Input id="inp2" required="true" ></Input>
-
-           <Label class="sapUiTinyMarginTop" id="empage" text="Employee Age" required="true" ></Label>
-           <Input id="inp3" required="true" ></Input>
-
-           <Label class="sapUiTinyMarginTop" id="empmbl" text="Employee Mobile" required="true" ></Label>
-           <Input id="inp4" required="true" ></Input>
-
-           <Label class="sapUiTinyMarginTop" id="empemail" text="Employee Email" required="true" ></Label>
-           <Input id="inp5" required="true" ></Input>
-
-           <Label class="sapUiTinyMarginTop" id="empcomp" text="Employee Company" required="true" ></Label>
-           <Input id="inp6" required="true" ></Input>
-           </l:content>
-           </l:Grid>
-        </content>
-
+        <Panel id="pn1">
+            <Text
+                id="txt1"
+                text="Sales Customer CRUDQ "
+            />
         </Panel>
-         <Panel id="pnl2" headerText="Employee Details" expandable="false" >
-        <content>
-           <l:Grid id="grd2" defaultSpan="L6 M6" vSpacing="0">
-           <l:content>
-           <Label class="sapUiTinyMarginTop" id="empname2" text="Employee Name" required="true" ></Label>
-           <Input id="inp21" required="true" ></Input>
+        <ScrollContainer
+            id="scr1"
+            vertical="true"
+            horizontal="true"
+        >
+            <Table
+                id="tb1"
+                growing="true"
+                growingThreshold="100"
+                items="{JsonPo>/sales_data}"
+            >
+                <headerToolbar>
+                    <Toolbar  id="tlb1">
+                        <Button
+                            id="btntbl"
+                            text="Add Record"
+                            type="Emphasized"
+                            press="AddRecord"
+                            icon="sap-icon://add"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column
+                        width="10rem"
+                        id="col1"
+                    >
+                        <Label
+                            id="lb1"
+                            text="Kunnr"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empid2" text="Employee ID" required="true" ></Label>
-           <Input id="inp22" required="true" ></Input>
+                    <Column
+                        width="10rem"
+                        id="col2"
+                    >
+                        <Label
+                            id="lb2"
+                            text="Land1"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empage2" text="Employee Age" required="true" ></Label>
-           <Input id="inp23" required="true" ></Input>
+                    <Column
+                        width="10rem"
+                        id="col3"
+                    >
+                        <Label
+                            id="lb3"
+                            text="Name1"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empmbl2" text="Employee Mobile" required="true" ></Label>
-           <Input id="inp24" required="true" ></Input>
+                    <Column
+                        width="10rem"
+                        id="col4"
+                    >
+                        <Label
+                            id="lb4"
+                            text="Name2"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empemail2" text="Employee Email" required="true" ></Label>
-           <Input id="inp25" required="true" ></Input>
+                    <Column
+                        width="10rem"
+                        id="col5"
+                    >
+                        <Label
+                            id="lb5"
+                            text="Ort01"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empcomp2" text="Employee Company" required="true" ></Label>
-           <Input id="inp26" required="true" ></Input>
-           </l:content>
-           </l:Grid>
-        </content>
-        </Panel>
+                    <Column
+                        width="10rem"
+                        id="col6"
+                    >
+                        <Label
+                            id="lb6"
+                            text="Pstlz"
+                        />
+                    </Column>
 
-         <Panel id="pnl3" headerText="Employee Details" expandable="false" >
-        <content>
-           <l:Grid id="grd3" >
-           <l:content>
+                    <Column
+                        width="10rem"
+                        id="col7"
+                    >
+                        <Label
+                            id="lb7"
+                            text="Regio"
+                        />
+                    </Column>
 
-           <Label class="sapUiTinyMarginTop" id="empname3" text="Employee Name" required="true" >
-           <layoutData>
-           <l:GridData id="grdd3" span="L6 M6"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp31" required="true" >
-            <layoutData>
-           <l:GridData id="grdd4" span="L6 M6"></l:GridData>
-           </layoutData>
-           </Input>
-
-           <Label class="sapUiTinyMarginTop" id="empid3" text="Employee ID" required="true" >
-           <layoutData>
-           <l:GridData id="5" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp32" required="true" >
-            <layoutData>
-           <l:GridData id="6" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Input>
-
-           <Label class="sapUiTinyMarginTop" id="empage3" text="Employee Age" required="true" >
-            <layoutData>
-           <l:GridData id="7" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp33" required="true" >
-            <layoutData>
-           <l:GridData id="8" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Input>
-
-           <Label class="sapUiTinyMarginTop" id="empmbl3" text="Employee Mobile" required="true" >
-            <layoutData>
-           <l:GridData id="9" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp34" required="true" >
-            <layoutData>
-           <l:GridData id="10" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Input>
-
-           <Label class="sapUiTinyMarginTop" id="empemail3" text="Employee Email" required="true" >
-            <layoutData>
-           <l:GridData id="11" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp35" required="true" >
-            <layoutData>
-           <l:GridData id="12" span="L3 M3"></l:GridData>
-           </layoutData>
-           </Input>
-
-           <Label class="sapUiTinyMarginTop" id="empcomp3" text="Employee Company" required="true" >
-            <layoutData>
-           <l:GridData id="13" span="L6 M6"></l:GridData>
-           </layoutData>
-           </Label>
-
-           <Input id="inp36" required="true" >
-            <layoutData>
-           <l:GridData id="14" span="L6 M6"></l:GridData>
-           </layoutData>
-           </Input>
-
-           </l:content>
-           </l:Grid>
-        </content>
-        </Panel>
-        
-        <footer>
-            <Bar id="_IDGenBar">
-                <contentRight>
-                    <Button
-                        id="save1"
-                        type="Emphasized"
-                        text="Save"
-                    />
-                    <Button
-                        id="save2"
-                        type="Reject"
-                        text="Cancel"
-                    />
-                </contentRight>
-            </Bar>
-        </footer>
+                    <Column
+                        width="10rem"
+                        id="col8"
+                    >
+                        <Label
+                            id="lb8"
+                            text="Sortl"
+                        />
+                    </Column>
+                    <Column
+                        width="10rem"
+                        id="col83"
+                    >
+                        <Label
+                            id="lb83"
+                            text="Action"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="cl1">
+                        <cells>
+                            <Text
+                                id="kunnr"
+                                text="{JsonPo>Kunnr}"
+                            />
+                            <Text
+                                id="land1"
+                                text="{JsonPo>Land1}"
+                            />
+                            <Text
+                                id="name1"
+                                text="{JsonPo>Name1}"
+                            />
+                            <Text
+                                id="name2"
+                                text="{JsonPo>Name2}"
+                            />
+                            <Text
+                                id="ort01"
+                                text="{JsonPo>Ort01}"
+                            />
+                            <Text
+                                id="pstlz"
+                                text="{JsonPo>Pstlz}"
+                            />
+                            <Text
+                                id="regio"
+                                text="{JsonPo>Regio}"
+                            />
+                            <Text
+                                id="sortl"
+                                text="{JsonPo>Sortl}"
+                            />
+                            <HBox id="hbox1">
+                                <Button
+                                    id="delete"
+                                    icon="sap-icon://delete"
+                                    press="deleteRecord"
+                                    type="Reject"
+                                    text="Remove"
+                                    class="sapUiTinyMarginEnd"
+                                />
+                                <Button
+                                    id="edit"
+                                    icon="sap-icon://edit"
+                                    press="editRecord"
+                                    type="Emphasized"
+                                    text="Edit"
+                                    class="sapUiTinyMarginStart"
+                                />
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </ScrollContainer>
     </Page>
 </mvc:View>

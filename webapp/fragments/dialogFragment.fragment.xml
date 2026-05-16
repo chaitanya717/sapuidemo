@@ -1,0 +1,113 @@
+<core:FragmentDefinition
+    id="dialogFragment"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog id="dialogId">
+        <content>
+            <form:SimpleForm
+                id="simpleFormId"
+                title="Customer Details"
+                editable="true"
+            >
+                <form:content>
+                    <Label
+                        id="lb123"
+                        text="Customer Number"
+                    />
+                    <Input
+                        id="in456"
+                        editable="false"
+                        value="{oPayloadModel>/oPayload/Kunnr}"
+                    />
+
+                    <Label
+                        id="lb123a"
+                        text="Land1"
+                    />
+                    <Input
+                        id="in456a"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Land1}"
+                    />
+
+                    <Label
+                        id="lb123b"
+                        text="Name1"
+                    />
+                    <Input
+                        id="in456bb"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Name1}"
+                    />
+
+                    <Label
+                        id="lb123c"
+                        text="Name2"
+                    />
+                    <Input
+                        id="in456c"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Name2}"
+                    />
+
+                    <Label
+                        id="lb123d"
+                        text="Ort01"
+                    />
+                    <Input
+                        id="in456d"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Ort01}"
+                    />
+
+                    <Label
+                        id="lb123e"
+                        text="Pstlz"
+                    />
+                    <Input
+                        id="in456e"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Pstlz}"
+                    />
+
+                    <Label
+                        id="lb123f"
+                        text="Regio"
+                    />
+                    <Input
+                        id="in456f"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Regio}"
+                    />
+
+                    <Label
+                        id="lb123g"
+                        text="Sortl"
+                    />
+                    <Input
+                        id="in456g"
+                        editable="true"
+                        value="{oPayloadModel>/oPayload/Sortl}"
+                    />
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <beginButton>
+            <Button
+                id="save123"
+                press="confirmUpdate"
+                text="Save"
+                type="Emphasized"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                id="btn456"
+                text="Cancel"
+                press="cancelUpdate"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
