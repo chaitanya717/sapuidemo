@@ -13,7 +13,7 @@ sap.ui.define(
       onInit: function () {
         this.onReadData();
       },
-
+      
       onReadData: function () {
         var oDataModel = this.getOwnerComponent().getModel("ZFIRST_ODATA_SRV");
         var oJsonModel = this.getOwnerComponent().getModel("JsonPo");
